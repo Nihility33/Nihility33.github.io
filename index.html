@@ -4,304 +4,170 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>王梓融 · Agent 售前 × AI 产品经理 作品集</title>
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'PingFang SC','Roboto','Segoe UI',Arial,sans-serif; background:#F7F8FA; color:#1A1B1C; line-height:1.7; }
-  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
-
-  nav { position:sticky; top:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); border-bottom:1px solid #E4E3DD; z-index:10; }
-  nav .wrap { display:flex; gap:24px; align-items:center; height:52px; font-size:14px; overflow-x:auto; white-space:nowrap; }
-  nav a { color:#3A8FB0; text-decoration:none; font-weight:500; }
-  nav a:hover { color:#1F5E77; }
-  nav .brand { font-weight:700; color:#1A1B1C; margin-right:auto; }
-
-  .hero { padding:56px 0 40px; text-align:center; }
-  .hero h1 { font-size:34px; font-weight:700; letter-spacing:1px; }
-  .hero .sub { font-size:17px; color:#3A8FB0; margin-top:6px; font-weight:600; }
-  .hero .tag { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px; }
-  .hero .tag span { background:#fff; border:1px solid #DCE3E8; border-radius:999px; padding:4px 14px; font-size:13px; color:#44535C; }
-  .hero .line { font-size:15px; color:#6B7280; margin-top:16px; max-width:720px; margin-left:auto; margin-right:auto; }
-
-  section { padding:36px 0; }
-  .sec-title { font-size:22px; font-weight:700; margin-bottom:6px; }
-  .sec-desc { font-size:14px; color:#6B7280; margin-bottom:20px; }
-  .card { background:#fff; border:1px solid #E4E3DD; border-radius:14px; padding:22px; margin-bottom:16px; }
-  .card h3 { font-size:17px; margin-bottom:10px; }
-  .card p { font-size:14px; color:#3A444C; margin-bottom:8px; }
-  .card ul { font-size:14px; color:#3A444C; padding-left:20px; margin-bottom:8px; }
-  .card li { margin-bottom:4px; }
-
-  .loop { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:8px 0 4px; }
-  .loop .node { flex:1 1 200px; min-width:200px; border-radius:14px; padding:18px 16px; text-align:center; color:#fff; }
-  .node .num { font-size:26px; font-weight:700; display:block; }
-  .node .tt { font-size:15px; font-weight:600; display:block; margin-top:2px; }
-  .node .dd { font-size:12px; opacity:0.92; display:block; margin-top:6px; line-height:1.5; }
-  .n-c { background:linear-gradient(135deg,#3A8FB0,#5FB3D6); }
-  .n-a { background:linear-gradient(135deg,#2E8B6E,#5FC4A2); }
-  .n-b { background:linear-gradient(135deg,#7B6CC4,#A99BE8); }
-  .arrow { font-size:22px; color:#8A9BA8; align-self:center; }
-
-  .stats { display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
-  .stat { flex:1 1 150px; min-width:150px; background:#fff; border:1px solid #E4E3DD; border-radius:14px; padding:14px; text-align:center; }
-  .stat .v { font-size:24px; font-weight:700; color:#2E8B6E; }
-  .stat .l { font-size:12px; color:#6B7280; margin-top:2px; }
-
-  table { width:100%; border-collapse:collapse; font-size:13px; margin:10px 0; }
-  th,td { border:1px solid #DCE3E8; padding:8px 10px; text-align:left; }
-  th { background:#D9D9D9; font-weight:600; }
-  tr:nth-child(even) td { background:#F8F9FB; }
-  .hl { color:#2E8B6E; font-weight:600; }
-
-  .two { display:flex; flex-wrap:wrap; gap:14px; }
-  .two > div { flex:1 1 300px; min-width:280px; }
-  .note { font-size:12px; color:#8A93A0; background:rgba(0,0,0,0.03); border-radius:10px; padding:10px 14px; margin-top:8px; }
-  .badge { display:inline-block; background:#EEF5F9; color:#1F5E77; border:1px solid #C9DEE9; border-radius:6px; padding:1px 8px; font-size:12px; font-weight:600; margin-right:6px; }
-  .badge.m { background:#F0F7F2; color:#2E8B6E; border-color:#C4E4D3; }
-  .badge.s { background:#F5F1EC; color:#8A6D3B; border-color:#E4D5BE; }
-
-  footer { padding:30px 0 44px; text-align:center; color:#8A93A0; font-size:13px; border-top:1px solid #E4E3DD; margin-top:20px; }
-  footer b { color:#44535C; }
-  @media (max-width:640px){ .hero h1{font-size:27px} .loop .node{flex:1 1 100%} }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
-  <div class="wrap">
-    <span class="brand">王梓融 · 作品集</span>
-    <a href="#overview">总览</a>
-    <a href="#projC">项目C·评测</a>
-    <a href="#projA">项目A·方案书</a>
-    <a href="#projB">项目B·PRD</a>
-    <a href="#about">关于我</a>
+  <div class="inner">
+    <a class="nav-brand" href="index.html"><span class="dot"></span>王梓融 · 作品集</a>
+    <button class="menu-toggle">菜单</button>
+    <div class="nav-links">
+      <a class="nav-item active" href="index.html">首页</a>
+      <span class="nav-item has-sub">作品三件套
+        <div class="dropdown">
+          <a href="project-c.html"><span class="k">C</span><span>验证 · 三平台评测<span class="d">Coze / 百炼 / Dify 实测 4.50/4.80/4.95</span></span></a>
+          <a href="project-a.html"><span class="k">A</span><span>销售 · 售前方案书<span class="d">给酒店的 POL+Agent 一体化方案</span></span></a>
+          <a href="project-b.html"><span class="k">B</span><span>定义 · 完整 PRD<span class="d">12 章 + 2 附录 · 15 张规范表格</span></span></a>
+        </div>
+      </span>
+      <a class="nav-item" href="index.html#about">关于我</a>
+      <a class="nav-item" href="index.html#contact">联系</a>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <div class="wrap">
+  <div class="inner">
     <h1>王梓融</h1>
     <div class="sub">Agent 售前工程师 × AI 产品经理（校招）</div>
-    <div class="tag">
+    <div class="chips">
       <span>曼彻斯特大学 · 通信与信号处理硕士</span>
-      <span>诺基亚 POL 产品线测开（1年）</span>
+      <span>诺基亚 POL 产品线测开（1 年）</span>
       <span>RAG / Agent / LLMOps</span>
       <span>三平台实测 4.50 / 4.80 / 4.95</span>
     </div>
-    <p class="line">我不是"会做测试的人"，而是"懂产品、懂客户、懂落地的人"：用同一个产品场景，分别以
+    <p class="lead">我不是"会做测试的人"，而是<b>懂产品、懂客户、懂落地的人</b>：用同一个产品场景，分别以
       <b>验证（评测）、销售（方案书）、定义（PRD）</b>三个动作做完整闭环，证明我对 Agent 售前与 AI 产品经理岗位的全流程理解。</p>
+    <a class="cta" href="#works">查看三件套作品 ↓</a>
   </div>
+  <div class="scroll-hint">SCROLL</div>
 </div>
 
-<!-- 总览 -->
-<section id="overview">
+<section id="works">
   <div class="wrap">
-    <div class="sec-title">作品集：三件套 × 一个场景</div>
-    <div class="sec-desc">场景统一为「POL 智能运维客服 Agent」——RAG 排障 + 转人工闭环。三件套不是三份文档，是三个岗位动作。</div>
-    <div class="loop">
-      <div class="node n-c">
-        <span class="num">C</span><span class="tt">验证 · 三平台评测</span>
-        <span class="dd">Coze / 百炼 / Dify 同一知识库·同一提示词·同一10题<br>实测平均分 4.50 / 4.80 / 4.95</span>
-      </div>
-      <div class="arrow">→</div>
-      <div class="node n-a">
-        <span class="num">A</span><span class="tt">销售 · 售前方案书</span>
-        <span class="dd">给客户的 POL+Agent 一体化方案<br>信息敏感度 × 平台选型矩阵 · ROI</span>
-      </div>
-      <div class="arrow">→</div>
-      <div class="node n-b">
-        <span class="num">B</span><span class="tt">定义 · 完整 PRD</span>
-        <span class="dd">12 章 + 2 附录 · 15 张规范表格<br>MoSCoW 功能需求 · 北极星+护栏指标体系</span>
-      </div>
-    </div>
-    <div class="note">为什么这么做：售前要证明"我懂怎么把 AI 卖进企业"，产品经理要证明"我懂怎么把 AI 定义成产品"，
-      工程师背景则保证了"我说的研发能听懂"。同一场景三视角，面试官每问一个角度都有作品可指。</div>
-  </div>
-</section>
-
-<!-- 项目C -->
-<section id="projC">
-  <div class="wrap">
-    <div class="sec-title">项目 C · 三平台评测报告</div>
-    <div class="sec-desc">同场景、同知识库（27 条 POL 故障 FAQ）、同提示词、同 10 题，在三个主流 Agent 平台横向实测。</div>
-
-    <div class="stats">
-      <div class="stat"><div class="v">4.50</div><div class="l">Coze · SaaS 托管</div></div>
-      <div class="stat"><div class="v">4.80</div><div class="l">百炼 · 云原生</div></div>
-      <div class="stat"><div class="v">4.95</div><div class="l">Dify · 私有化</div></div>
-      <div class="stat"><div class="v">27 条</div><div class="l">统一知识库 FAQ</div></div>
-      <div class="stat"><div class="v">10 题</div><div class="l">横向测试用例</div></div>
+    <div class="sec-title reveal">作品三件套 · 一个场景</div>
+    <div class="sec-desc reveal">场景统一为「POL 智能运维客服 Agent」——RAG 排障 + 转人工闭环。三件套不是三份文档，是三个岗位动作。</div>
+    <div class="cards3">
+      <a class="tcard tc-c reveal" href="project-c.html" style="transition-delay:.05s">
+        <div class="k">C</div>
+        <div class="tt">验证 · 三平台评测</div>
+        <div class="dd">Coze / 百炼 / Dify 同一知识库、同一提示词、同一 10 题横向实测<br>平均分 4.50 / 4.80 / 4.95</div>
+        <div class="go">进入评测报告 →</div>
+      </a>
+      <a class="tcard tc-a reveal" href="project-a.html" style="transition-delay:.15s">
+        <div class="k">A</div>
+        <div class="tt">销售 · 售前方案书</div>
+        <div class="dd">把实测翻译成客户价值——面向连锁酒店集团的 POL+Agent 一体化方案<br>信息敏感度 × 平台选型矩阵</div>
+        <div class="go">进入方案书 →</div>
+      </a>
+      <a class="tcard tc-b reveal" href="project-b.html" style="transition-delay:.25s">
+        <div class="k">B</div>
+        <div class="tt">定义 · 完整 PRD</div>
+        <div class="dd">把客户愿意买的定义成研发能做的<br>12 章 + 2 附录 · 15 张规范表格 · MoSCoW · 北极星+护栏</div>
+        <div class="go">进入 PRD →</div>
+      </a>
     </div>
 
-    <div class="card">
-      <h3>三平台五维评分（1–5）</h3>
-      <table>
-        <tr><th>维度</th><th>Coze</th><th>百炼</th><th>Dify</th><th>一句话解读</th></tr>
-        <tr><td>知识库 / RAG</td><td>5</td><td>3（挂载受阻）</td><td class="hl">5（可验证）</td><td>Dify 的回答可溯源到知识库判据</td></tr>
-        <tr><td>模型能力</td><td>4</td><td class="hl">5</td><td>5</td><td>Qwen3.8-Max / DeepSeek 均强</td></tr>
-        <tr><td>编排自由度</td><td>4</td><td>4</td><td class="hl">5</td><td>Dify 工作流/Chatflow 全类型</td></tr>
-        <tr><td>易用性</td><td class="hl">5</td><td>4</td><td>2</td><td>Coze 注册即用；Dify 部署门槛高</td></tr>
-        <tr><td>成本友好度</td><td>3</td><td class="hl">5</td><td>4</td><td>百炼 392 模型各 1M token 免费</td></tr>
-      </table>
-      <p style="margin-top:10px;"><b>选型结论（售前视角）</b>：三家不是竞争关系，是三种交付模式——<span class="badge">Coze</span>SaaS 快验证、
-      <span class="badge">百炼</span>云原生做企业底座、<span class="badge">Dify</span>私有化保数据主权。给客户选型的本质是权衡「速度 × 成本 × 数据主权」。</p>
-    </div>
-
-    <div class="card">
-      <h3>关键实测证据（10 题中的代表题）</h3>
-      <table>
-        <tr><th>场景</th><th>Coze</th><th>百炼</th><th>Dify</th></tr>
-        <tr><td>整栋楼 ONU 全部掉线</td><td>追问范围→批量识别→转人工</td><td>判定大面积→转人工+OTDR 建议</td><td class="hl">转人工→PON口/分光器→现场确认→报障单</td></tr>
-        <tr><td>光衰 -27dBm 掉线</td><td>search_faq 真实命中</td><td>诚实声明"没检索到 FAQ"</td><td class="hl">引用判据"低于-27dBm即光衰过大"→分段测量→趋势提醒</td></tr>
-      </table>
-      <p style="margin-top:10px;">百炼那句"没检索到已加载的 FAQ"是我这次评测最值钱的发现：<b>懂行的专家没带资料</b>——知识库挂载体验直接决定
-      RAG 产品成败，这成为我 PRD 中 F1.5"检索可观测"需求的直接依据。</p>
-      <div class="note">评测局限（诚实声明）：三平台用了三个不同模型，分数混杂模型效应；上线前需补"控制模型变量"的消融评测。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 项目A -->
-<section id="projA">
-  <div class="wrap">
-    <div class="sec-title">项目 A · 售前方案书</div>
-    <div class="sec-desc">把"项目 C 的实测"翻译成"客户听得懂的价值"——面向连锁酒店集团的 POL 智能运维 Agent 一体化方案。</div>
-
-    <div class="two">
-      <div class="card">
-        <h3>客户痛点（来自真实交付链路）</h3>
-        <ul>
-          <li>交付链路长、信息逐级衰减：研发→PM→测试→售后→现场，全程不到 10 人</li>
-          <li>现场问题逐级回流，PM 兜底 → 测试兜底 → 研发，响应慢</li>
-          <li>一周两次 sync 碎片化，无法全员对齐</li>
-          <li>BP 几十上百页，关键字检索低效，客户无法自助</li>
-          <li>不同客户信息敏感度不同（酒店/政府/国防），需要差异化选型</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>方案价值（四大）</h3>
-        <ul>
-          <li><b>7×24 自助排障</b>：常见故障自助解决率目标 ≥60%</li>
-          <li><b>SOP 标准化</b>：现场工程师按步骤执行，新人快速上手</li>
-          <li><b>知识沉淀</b>：FAQ/BP/会议视频统一入库，人员流动不带走经验</li>
-          <li><b>全链路对齐</b>：客户、现场、内部团队站在同一信息平面</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>核心方法论：信息敏感度 × 平台选型矩阵</h3>
-      <table>
-        <tr><th>客户类型</th><th>敏感度</th><th>推荐选型</th><th>理由</th></tr>
-        <tr><td>连锁酒店集团</td><td>中</td><td>Dify 私有化 + 本地模型</td><td>数据不出内网，回答可溯源</td></tr>
-        <tr><td>政府机构</td><td>高</td><td>全私有化 + 离线部署</td><td>合规红线，零外联</td></tr>
-        <tr><td>电信运营商</td><td>中高</td><td>云原生（百炼）或私有化</td><td>规模化 + 生态集成</td></tr>
-        <tr><td>中小企业</td><td>低</td><td>Coze SaaS 快速起步</td><td>零门槛，按量付费</td></tr>
-      </table>
-      <p style="margin-top:10px;">交付物：<span class="badge">方案书</span>六大章节+附录 ABC（含信息敏感度×选型矩阵）
-      <span class="badge">一页纸</span>客户决策版价值摘要</p>
-      <div class="note">合规处理：客户均脱敏（主案例"某连锁酒店集团"），厂商为虚拟主体"XX 通信"，报价只写定价逻辑与 ROI 示例、不写具体金额——售前材料的基本职业素养。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 项目B -->
-<section id="projB">
-  <div class="wrap">
-    <div class="sec-title">项目 B · 完整 PRD</div>
-    <div class="sec-desc">把"客户愿意买的"定义成"研发能做的"——12 章 + 2 附录，可直接进入研发评审。</div>
-
-    <div class="two">
-      <div class="card">
-        <h3>功能需求（MoSCoW）</h3>
-        <table>
-          <tr><th>模块</th><th>优先级</th><th>核心内容</th></tr>
-          <tr><td>F1 知识库管理</td><td><span class="badge m">Must</span></td><td>导入/切片/向量化/版本/权限/命中标记</td></tr>
-          <tr><td>F2 对话排障</td><td><span class="badge m">Must</span></td><td>五要素收集·分步排查·引用溯源</td></tr>
-          <tr><td>F3 转人工与工单</td><td><span class="badge m">Must</span></td><td>升级判定·工单生成·人工接管</td></tr>
-          <tr><td>F4 工具与集成</td><td><span class="badge s">Should</span></td><td>OTDR 建议·网管/工单系统对接</td></tr>
-          <tr><td>F5 运营分析</td><td><span class="badge s">Should</span></td><td>命中率·问题分布·质量抽检</td></tr>
-        </table>
-      </div>
-      <div class="card">
-        <h3>指标体系</h3>
-        <table>
-          <tr><th>层级</th><th>指标</th><th>目标</th></tr>
-          <tr><td>北极星</td><td>常见故障自助解决率</td><td class="hl">≥ 60%</td></tr>
-          <tr><td>护栏</td><td>转人工及时率</td><td class="hl">100%</td></tr>
-          <tr><td>护栏</td><td>误答率</td><td class="hl">≤ 5%</td></tr>
-          <tr><td>过程</td><td>知识库命中率</td><td>≥ 80%</td></tr>
-          <tr><td>验收</td><td>10 题测试平均分</td><td>≥ 4.5（基线 Dify 4.95）</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>核心交互：对话主流程（PRD 第七章）</h3>
-      <svg viewBox="0 0 720 210" style="width:100%;max-width:720px;height:auto;display:block;margin:6px 0;">
-        <rect x="10" y="70" width="110" height="56" rx="12" fill="#F4F3EE" stroke="#1A1B1C" stroke-width="1.2"/>
-        <text x="65" y="95" font-size="13" fill="#1A1B1C" text-anchor="middle" font-weight="600">用户提问</text>
-        <text x="65" y="112" font-size="10" fill="#6B7280" text-anchor="middle">"整栋掉线了"</text>
-        <line x1="120" y1="98" x2="150" y2="98" stroke="#8A9BA8" stroke-width="1.4"/><polygon points="150,98 142,94 142,102" fill="#8A9BA8"/>
-        <rect x="150" y="70" width="120" height="56" rx="12" fill="rgba(163,213,232,0.4)" stroke="#3A8FB0"/>
-        <text x="210" y="95" font-size="13" fill="#1A1B1C" text-anchor="middle" font-weight="600">收集信息</text>
-        <text x="210" y="112" font-size="10" fill="#4A6572" text-anchor="middle">五要素追问</text>
-        <line x1="270" y1="98" x2="300" y2="98" stroke="#8A9BA8" stroke-width="1.4"/><polygon points="300,98 292,94 292,102" fill="#8A9BA8"/>
-        <rect x="300" y="70" width="110" height="56" rx="12" fill="rgba(148,216,195,0.4)" stroke="#2E8B6E"/>
-        <text x="355" y="95" font-size="13" fill="#1A1B1C" text-anchor="middle" font-weight="600">RAG 检索</text>
-        <text x="355" y="112" font-size="10" fill="#3D6B5C" text-anchor="middle">知识库命中</text>
-        <line x1="410" y1="98" x2="440" y2="98" stroke="#8A9BA8" stroke-width="1.4"/><polygon points="440,98 432,94 432,102" fill="#8A9BA8"/>
-        <rect x="440" y="70" width="120" height="56" rx="12" fill="rgba(163,213,232,0.4)" stroke="#3A8FB0"/>
-        <text x="500" y="95" font-size="13" fill="#1A1B1C" text-anchor="middle" font-weight="600">分步排查</text>
-        <text x="500" y="112" font-size="10" fill="#4A6572" text-anchor="middle">光路→注册→业务→VLAN</text>
-        <line x1="560" y1="98" x2="590" y2="98" stroke="#8A9BA8" stroke-width="1.4"/><polygon points="590,98 582,94 582,102" fill="#8A9BA8"/>
-        <rect x="590" y="70" width="120" height="56" rx="12" fill="rgba(82,196,26,0.15)" stroke="#52C41A"/>
-        <text x="650" y="95" font-size="13" fill="#1A1B1C" text-anchor="middle" font-weight="600">解决闭环</text>
-        <text x="650" y="112" font-size="10" fill="#4A6B3F" text-anchor="middle">满意度·数据回流</text>
-        <rect x="300" y="8" width="230" height="44" rx="12" fill="rgba(234,102,104,0.14)" stroke="#C21A1A"/>
-        <text x="415" y="27" font-size="12" fill="#1A1B1C" text-anchor="middle" font-weight="600">升级条件命中 → 转人工 + 工单</text>
-        <text x="415" y="43" font-size="10" fill="#7A3536" text-anchor="middle">影响面大 / 光路中断 / 多轮未决</text>
-        <line x1="355" y1="70" x2="415" y2="52" stroke="#C21A1A" stroke-width="1.4" stroke-dasharray="5,4"/>
+    <div class="card reveal" style="margin-top:22px">
+      <h3>为什么是三件套（闭环逻辑）</h3>
+      <svg viewBox="0 0 720 96" style="width:100%;max-width:720px;height:auto;display:block;margin:8px 0;">
+        <rect x="20" y="24" width="190" height="48" rx="13" fill="rgba(47,127,184,0.14)" stroke="#2F7FB8"/>
+        <text x="115" y="46" font-size="14" fill="#1A1B1C" text-anchor="middle" font-weight="600">C 验证 · 评测</text>
+        <text x="115" y="63" font-size="11" fill="#4A6572" text-anchor="middle">证明技术路线可行</text>
+        <line class="flowline" x1="210" y1="48" x2="265" y2="48" stroke="#4F8EF7" stroke-width="2"/>
+        <polygon points="265,48 257,44 257,52" fill="#4F8EF7"/>
+        <rect x="265" y="24" width="190" height="48" rx="13" fill="rgba(37,122,95,0.14)" stroke="#257A5F"/>
+        <text x="360" y="46" font-size="14" fill="#1A1B1C" text-anchor="middle" font-weight="600">A 销售 · 方案书</text>
+        <text x="360" y="63" font-size="11" fill="#3D6B5C" text-anchor="middle">翻译成客户价值</text>
+        <line class="flowline" x1="455" y1="48" x2="510" y2="48" stroke="#8B5CF6" stroke-width="2"/>
+        <polygon points="510,48 502,44 502,52" fill="#8B5CF6"/>
+        <rect x="510" y="24" width="190" height="48" rx="13" fill="rgba(91,77,176,0.14)" stroke="#5B4DB0"/>
+        <text x="605" y="46" font-size="14" fill="#1A1B1C" text-anchor="middle" font-weight="600">B 定义 · PRD</text>
+        <text x="605" y="63" font-size="11" fill="#5B4DB0" text-anchor="middle">定义成研发能做的</text>
       </svg>
-      <p style="margin-top:8px;">PRD 亮点：功能需求逐条带编号+验收要点；主动声明评测局限并要求消融评测；排期与方案书 6 阶段完全咬合。</p>
+      <p style="font-size:14px;color:#3A444C">售前要证明"我懂怎么把 AI 卖进企业"，产品经理要证明"我懂怎么把 AI 定义成产品"，工程师背景保证了"我说的研发能听懂"。同一场景三视角，面试官每问一个角度都有作品可指。</p>
     </div>
   </div>
 </section>
 
-<!-- 关于我 -->
-<section id="about">
+<section id="about" style="padding-top:8px">
   <div class="wrap">
-    <div class="sec-title">关于我</div>
-    <div class="card">
-      <div class="two">
-        <div>
-          <h3>经历</h3>
-          <ul>
-            <li><b>2026.01 毕业</b> · 曼彻斯特大学 通信与信号处理硕士（MSc）</li>
-            <li><b>2024.08–2025.08</b> · 诺基亚 POL 产品线测开（OD）<br>
-              <span style="color:#6B7280;font-size:13px">Python/Perl/Playwright/JIRA/Linux；编写 BP、给销售和现场工程师做培训</span></li>
-            <li><b>实习</b> · 海信硬件测试</li>
-          </ul>
-        </div>
-        <div>
-          <h3>为什么转售前 / AI 产品经理</h3>
-          <p>在诺基亚一年，我亲眼看到交付链路的真实痛点：一个不到 10 人的团队把 POL 方案交付给政府、国防、酒店、运营商，
-          信息断层和文档低效每天都在发生。我意识到自己真正想做的是<b>把技术翻译成客户价值、再把客户价值定义成产品</b>——
-          测开给了我"听得懂研发、写得出 BP、讲得清产品"的独特底座，AI Agent 是我切入这个方向的最佳支点。</p>
+    <div class="sec-title reveal">关于我</div>
+    <div class="two" style="margin-top:16px">
+      <div class="card reveal l">
+        <h3>经历时间线</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="when">2025.09 – 2026.01</div>
+            <div class="what">通信与信号处理 理学硕士 · 曼彻斯特大学</div>
+            <div class="desc">毕业论文：基于 MEEP 的太赫兹光子晶体器件 FDTD 仿真与验证</div>
+          </div>
+          <div class="tl-item">
+            <div class="when">2024.08 – 2025.08</div>
+            <div class="what">测试开发工程师（OD）· 诺基亚 POL 产品线（青岛）</div>
+            <div class="desc">Python/Perl/Playwright/JIRA/Linux；编写 BP、为销售与现场工程师提供培训</div>
+          </div>
+          <div class="tl-item">
+            <div class="when">2024.01 – 2024.02</div>
+            <div class="what">硬件测试实习生 · 海信网络科技</div>
+            <div class="desc">EMC 电磁兼容测试，Python 数据分析</div>
+          </div>
+          <div class="tl-item">
+            <div class="when">2020.09 – 2024.06</div>
+            <div class="what">通信工程 工学学士 · 天津理工大学（GPA 90.48/100）</div>
+            <div class="desc">一等奖学金 · 大唐杯全国通信竞赛一等奖</div>
+          </div>
         </div>
       </div>
-      <div class="note">联系：简历及附件请向候选人索取 · 本作品集所有客户信息均已脱敏，厂商为虚拟主体。</div>
+      <div class="card reveal r">
+        <h3>为什么转售前 / AI 产品经理</h3>
+        <p>在诺基亚一年，我亲眼看到交付链路的真实痛点：一个不到 10 人的团队把 POL 方案交付给政府、国防、酒店、运营商，信息断层和文档低效每天都在发生。</p>
+        <p>我意识到自己真正想做的是<b>把技术翻译成客户价值、再把客户价值定义成产品</b>。测开给了我"听得懂研发、写得出 BP、讲得清产品"的独特底座，AI Agent 是我切入这个方向的最佳支点。</p>
+        <p>技能亮点：RAG / Agent 编排 / LLMOps 平台（Coze、百炼、Dify）实战、开源 LLM 本地部署与推理、Python / Shell / Perl / MATLAB。</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-title reveal">联系我</div>
+    <div class="sec-desc reveal">欢迎校招 HC 联系，随时可安排面试。</div>
+    <div class="contact">
+      <div class="c-item reveal" style="transition-delay:.05s">
+        <div class="ic">📱</div>
+        <div class="t">电话</div>
+        <div class="v">+86 139 5320 0529</div>
+      </div>
+      <div class="c-item reveal" style="transition-delay:.15s">
+        <div class="ic">✉️</div>
+        <div class="t">邮箱</div>
+        <div class="v"><a href="mailto:isaacw00529@foxmail.com">isaacw00529@foxmail.com</a></div>
+      </div>
+      <div class="c-item reveal" style="transition-delay:.25s">
+        <div class="ic">🌐</div>
+        <div class="t">作品集</div>
+        <div class="v">nihility33.github.io</div>
+      </div>
+    </div>
+    <div class="note reveal">本作品集所有客户信息均已脱敏（主案例"某连锁酒店集团"），厂商为虚拟主体"XX 通信"。</div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <b>王梓融 · Agent 售前工程师 / AI 产品经理（校招）</b><br>
-    作品集由三件套组成：项目 C 三平台评测 → 项目 A 售前方案书 → 项目 B 完整 PRD<br>
-    本页为本地演示版 · 公网部署可用 GitHub Pages 免费托管
+    +86 139 5320 0529 ｜ isaacw00529@foxmail.com<br>
+    <div class="links">
+      <a href="project-c.html">项目C · 三平台评测</a>
+      <a href="project-a.html">项目A · 售前方案书</a>
+      <a href="project-b.html">项目B · 完整PRD</a>
+    </div>
   </div>
 </footer>
 
+<button id="topBtn">↑</button>
+<script src="js/app.js"></script>
 </body>
 </html>

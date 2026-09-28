@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目C · 三平台评测报告 | 王梓融 作品集</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="nav-brand" href="index.html"><span class="dot"></span>王梓融 · 作品集</a>
+    <button class="menu-toggle">菜单</button>
+    <div class="nav-links">
+      <a class="nav-item" href="index.html">首页</a>
+      <span class="nav-item has-sub active">作品三件套
+        <div class="dropdown">
+          <a href="project-c.html"><span class="k">C</span><span>验证 · 三平台评测<span class="d">Coze / 百炼 / Dify 实测 4.50/4.80/4.95</span></span></a>
+          <a href="project-a.html"><span class="k">A</span><span>销售 · 售前方案书<span class="d">给酒店的 POL+Agent 一体化方案</span></span></a>
+          <a href="project-b.html"><span class="k">B</span><span>定义 · 完整 PRD<span class="d">12 章 + 2 附录 · 15 张规范表格</span></span></a>
+        </div>
+      </span>
+      <a class="nav-item" href="index.html#about">关于我</a>
+      <a class="nav-item" href="index.html#contact">联系</a>
+    </div>
+  </div>
+</nav>
+
+<div class="pagehead">
+  <div class="crumb">作品集 · <b>项目 C</b></div>
+  <h1>三平台评测报告</h1>
+  <p>同场景、同知识库（27 条 POL 故障 FAQ）、同提示词、同 10 题，在三个主流 Agent 平台横向实测，用数据证明"知识库 + RAG + 转人工"路线可行。</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="v" data-count="4.50" data-dec=".00">0.00</div><div class="l">Coze · SaaS 托管</div></div>
+      <div class="stat reveal" style="transition-delay:.08s"><div class="v" data-count="4.80" data-dec=".00">0.00</div><div class="l">百炼 · 云原生</div></div>
+      <div class="stat reveal" style="transition-delay:.16s"><div class="v" data-count="4.95" data-dec=".00">0.00</div><div class="l">Dify · 私有化</div></div>
+      <div class="stat reveal" style="transition-delay:.24s"><div class="v" data-count="27">0</div><div class="l">统一知识库 FAQ</div></div>
+      <div class="stat reveal" style="transition-delay:.32s"><div class="v" data-count="10">0</div><div class="l">横向测试用例</div></div>
+    </div>
+
+    <div class="card reveal">
+      <h3>三平台总览对比</h3>
+      <table>
+        <tr><th>维度</th><th>Coze（字节）</th><th>百炼（阿里云）</th><th>Dify（开源）</th></tr>
+        <tr><td>交付模式</td><td>SaaS 托管</td><td>云原生（阿里云）</td><td>私有化（本地 Docker）</td></tr>
+        <tr><td>产品定位</td><td>低代码 Agent 搭建</td><td>企业级模型/智能体平台</td><td>LLMOps + 工作流编排</td></tr>
+        <tr><td>本次用模型</td><td>doubao-seed-2-0-lite</td><td>Qwen3.8-Max</td><td>DeepSeek V4.1 Flash</td></tr>
+        <tr><td>知识库</td><td>一键创建（云端 Embedding）</td><td>上传成功但会话挂载受阻</td><td>手动建库，可验证命中</td></tr>
+        <tr><td>数据归属</td><td>平台云端</td><td>阿里云</td><td class="hl">100% 本地</td></tr>
+        <tr><td>部署门槛</td><td>零（注册即用）</td><td>低（注册即用）</td><td>高（Docker/镜像/代理）</td></tr>
+        <tr><td>编排自由度</td><td>中（配置化）</td><td>中高（工具+代码）</td><td class="hl">高（全类型工作流）</td></tr>
+      </table>
+    </div>
+
+    <div class="card reveal">
+      <h3>五维评分（1–5）</h3>
+      <table>
+        <tr><th>维度</th><th>Coze</th><th>百炼</th><th>Dify</th><th>一句话解读</th></tr>
+        <tr><td>知识库 / RAG</td><td>5</td><td>3（挂载受阻）</td><td class="hl">5（可验证）</td><td>Dify 的回答可溯源到知识库判据</td></tr>
+        <tr><td>模型能力</td><td>4</td><td class="hl">5</td><td>5</td><td>Qwen3.8-Max / DeepSeek 均强</td></tr>
+        <tr><td>编排自由度</td><td>4</td><td>4</td><td class="hl">5</td><td>工作流/Chatflow/Agent 全类型</td></tr>
+        <tr><td>易用性</td><td class="hl">5</td><td>4</td><td>2</td><td>Coze 注册即用；Dify 部署门槛高</td></tr>
+        <tr><td>成本友好度</td><td>3</td><td class="hl">5</td><td>4</td><td>百炼 392 模型各 1M token 免费</td></tr>
+      </table>
+    </div>
+
+    <div class="card reveal">
+      <h3>关键实测证据（10 题代表）</h3>
+      <table>
+        <tr><th>场景</th><th>Coze</th><th>百炼</th><th>Dify</th></tr>
+        <tr><td>整栋楼 ONU 全部掉线</td><td>追问范围 → 批量识别 → 转人工</td><td>判定大面积 → 转人工 + OTDR 建议</td><td class="hl">转人工 → PON口/分光器 → 现场确认 → 报障单</td></tr>
+        <tr><td>光衰 -27dBm 掉线</td><td>search_faq 真实命中</td><td>诚实声明"没检索到 FAQ"</td><td class="hl">引用判据"低于-27dBm即光衰过大" → 分段测量 → 趋势提醒</td></tr>
+      </table>
+      <p style="margin-top:12px">百炼那句"没检索到已加载的 FAQ"是我这次评测最值钱的发现：<b>懂行的专家没带资料</b>——
+      知识库挂载体验直接决定 RAG 产品成败，这成为我 PRD 中 F1.5"检索可观测"需求的直接依据。</p>
+      <div class="note">评测局限（诚实声明）：三平台用了三个不同模型，分数混杂模型效应；上线前需补"控制模型变量"的消融评测。</div>
+    </div>
+
+    <div class="card reveal">
+      <h3>选型结论（售前视角）</h3>
+      <p>三家不是竞争关系，是三种交付模式：<span class="badge">Coze</span>SaaS 快验证、
+      <span class="badge">百炼</span>云原生做企业底座、<span class="badge">Dify</span>私有化保数据主权。</p>
+      <p>给客户选型的本质是权衡「速度 × 成本 × 数据主权」。本作品集的项目 A（方案书）用这个结论做了"信息敏感度 × 平台选型"矩阵，项目 B（PRD）用 Dify 的最佳实践定义了产品需求。</p>
+    </div>
+
+    <div class="two">
+      <div class="card reveal" style="text-align:center">
+        <p style="font-size:14px;color:var(--muted)">← 返回作品总览</p>
+        <a href="index.html" style="display:inline-block;margin-top:6px;padding:10px 22px;border-radius:11px;background:var(--grad);color:#fff;font-size:14px;font-weight:600">回到首页</a>
+      </div>
+      <div class="card reveal" style="text-align:center">
+        <p style="font-size:14px;color:var(--muted)">下一步：评测结论如何变成客户方案 →</p>
+        <a href="project-a.html" style="display:inline-block;margin-top:6px;padding:10px 22px;border-radius:11px;background:#257A5F;color:#fff;font-size:14px;font-weight:600">进入项目 A · 方案书</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>王梓融 · Agent 售前工程师 / AI 产品经理（校招）</b><br>
+    +86 139 5320 0529 ｜ isaacw00529@foxmail.com<br>
+    <div class="links">
+      <a href="index.html">首页</a>
+      <a href="project-a.html">项目A · 售前方案书</a>
+      <a href="project-b.html">项目B · 完整PRD</a>
+    </div>
+  </div>
+</footer>
+
+<button id="topBtn">↑</button>
+<script src="js/app.js"></script>
+</body>
+</html>
