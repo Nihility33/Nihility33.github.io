@@ -4,172 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>王梓融 · Agent 售前 × AI 产品经理 作品集</title>
-<style>
-/* ===== 作品集共享样式：深色科技风 + 精致动画 ===== */
-:root{
-  --bg:#F7F8FA; --card:#FFFFFF; --line:#E4E3DD;
-  --dark:#0B1220; --dark2:#111A2E;
-  --accent:#4F8EF7; --accent2:#8B5CF6; --green:#2E8B6E; --red:#C21A1A;
-  --text:#1A1B1C; --muted:#6B7280;
-  --grad:linear-gradient(135deg,#4F8EF7 0%,#8B5CF6 100%);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'PingFang SC','Roboto','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;}
-
-/* ===== 导航（毛玻璃 + 子菜单）===== */
-nav{position:sticky;top:0;z-index:100;background:rgba(11,18,32,0.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);}
-nav .inner{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:58px;gap:4px;}
-.nav-brand{font-weight:700;color:#fff;font-size:15px;letter-spacing:1px;margin-right:auto;display:flex;align-items:center;gap:8px;}
-.nav-brand .dot{width:9px;height:9px;border-radius:50%;background:var(--grad);box-shadow:0 0 12px rgba(79,143,247,0.9);}
-.nav-item{position:relative;padding:8px 13px;border-radius:10px;color:#C9D4E4;font-size:14px;transition:color .25s,background .25s;}
-.nav-item:hover{color:#fff;background:rgba(255,255,255,0.08);}
-.nav-item.active{color:#fff;background:rgba(79,143,247,0.18);}
-.nav-item.has-sub::after{content:'\25BE';margin-left:5px;font-size:11px;opacity:.7;}
-.dropdown{position:absolute;top:100%;left:0;min-width:230px;background:rgba(17,26,46,0.97);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .28s cubic-bezier(.22,1,.36,1);box-shadow:0 18px 40px rgba(0,0,0,0.45);}
-.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(4px);}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#D5DEEC;font-size:13.5px;transition:background .2s,color .2s;}
-.dropdown a:hover{background:rgba(79,143,247,0.16);color:#fff;}
-.dropdown .k{flex:0 0 20px;width:20px;height:20px;border-radius:6px;background:var(--grad);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.dropdown .d{font-size:11px;color:#8FA0B8;display:block;}
-.menu-toggle{display:none;background:none;border:1px solid rgba(255,255,255,0.2);color:#fff;border-radius:9px;padding:7px 12px;font-size:14px;cursor:pointer;}
-
-/* ===== Hero（深色渐变 + 点阵 + 光晕）===== */
-.hero{position:relative;background:radial-gradient(1200px 500px at 20% -10%,rgba(79,143,247,0.28),transparent 60%),radial-gradient(900px 420px at 85% 0%,rgba(139,92,246,0.24),transparent 55%),linear-gradient(160deg,#0B1220 0%,#111A2E 60%,#0B1220 100%);color:#fff;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.055) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 100%);mask-image:linear-gradient(180deg,#000 30%,transparent 100%);}
-.hero .inner{position:relative;max-width:1080px;margin:0 auto;padding:92px 20px 84px;}
-.hero h1{font-size:46px;font-weight:800;letter-spacing:2px;background:linear-gradient(100deg,#fff 40%,#A5C4FF 75%,#C9B8FF 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.hero .sub{margin-top:10px;font-size:19px;font-weight:600;color:#8FB8FF;}
-.hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
-.hero .chips span{border:1px solid rgba(255,255,255,0.22);background:rgba(255,255,255,0.06);border-radius:999px;padding:6px 16px;font-size:13px;color:#DDE6F4;transition:transform .3s,border-color .3s,background .3s;}
-.hero .chips span:hover{transform:translateY(-3px);border-color:rgba(79,143,247,0.7);background:rgba(79,143,247,0.14);}
-.hero .lead{margin-top:26px;max-width:760px;font-size:16px;color:#B8C4D8;line-height:1.9;}
-.hero .lead b{color:#fff;}
-.hero .cta{display:inline-flex;gap:10px;align-items:center;margin-top:30px;padding:12px 26px;border-radius:12px;background:var(--grad);color:#fff;font-size:15px;font-weight:600;box-shadow:0 8px 24px rgba(79,143,247,0.35);transition:transform .25s,box-shadow .25s;}
-.hero .cta:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(79,143,247,0.5);}
-.hero .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.45);font-size:12px;letter-spacing:2px;animation:bob 2.2s ease-in-out infinite;}
-@keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,6px);opacity:1}}
-
-/* ===== 页面头部（子页深色横幅）===== */
-.pagehead{background:radial-gradient(900px 360px at 15% -20%,rgba(79,143,247,0.26),transparent 60%),linear-gradient(160deg,#0B1220,#131C33);color:#fff;padding:56px 20px 44px;text-align:center;}
-.pagehead .crumb{font-size:12.5px;color:#8FA0B8;letter-spacing:1px;}
-.pagehead .crumb b{color:#A5C4FF;}
-.pagehead h1{font-size:30px;font-weight:800;margin-top:10px;letter-spacing:1px;}
-.pagehead p{font-size:14.5px;color:#B8C4D8;max-width:720px;margin:12px auto 0;}
-
-/* ===== 内容容器 ===== */
-section{padding:44px 0;}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
-.sec-title{font-size:22px;font-weight:700;margin-bottom:6px;position:relative;display:inline-block;}
-.sec-title::after{content:'';position:absolute;left:0;bottom:-5px;width:34px;height:3px;border-radius:2px;background:var(--grad);}
-.sec-desc{font-size:14px;color:var(--muted);margin:12px 0 24px;}
-
-/* ===== 卡片 ===== */
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:16px;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,30,60,0.10);border-color:#C9D9EE;}
-.card h3{font-size:17px;margin-bottom:12px;}
-.card p{font-size:14px;color:#3A444C;margin-bottom:8px;}
-.card ul{font-size:14px;color:#3A444C;padding-left:20px;margin-bottom:8px;}
-.card li{margin-bottom:5px;}
-.note{font-size:12.5px;color:#7A8391;background:rgba(15,30,60,0.04);border:1px solid rgba(15,30,60,0.07);border-radius:12px;padding:12px 16px;margin-top:10px;}
-
-/* ===== 表格 ===== */
-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0 4px;}
-th,td{border:1px solid #DCE3E8;padding:9px 11px;text-align:left;}
-th{background:#D9D9D9;font-weight:600;font-size:13px;}
-tr:nth-child(even) td{background:#F8F9FB;}
-td.hl{color:var(--green);font-weight:600;}
-tbody tr:hover td{background:#EFF4FB;}
-
-/* ===== 徽章 ===== */
-.badge{display:inline-block;background:#EEF5F9;color:#1F5E77;border:1px solid #C9DEE9;border-radius:6px;padding:1px 8px;font-size:12px;font-weight:600;margin-right:6px;}
-.badge.m{background:#F0F7F2;color:#2E8B6E;border-color:#C4E4D3;}
-.badge.s{background:#F5F1EC;color:#8A6D3B;border-color:#E4D5BE;}
-
-/* ===== 三件套卡片（3D hover）===== */
-.cards3{display:flex;flex-wrap:wrap;gap:18px;margin-top:8px;}
-.tcard{flex:1 1 280px;min-width:260px;position:relative;border-radius:18px;padding:26px 22px;color:#fff;overflow:hidden;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s;box-shadow:0 10px 30px rgba(15,30,60,0.18);cursor:pointer;}
-.tcard:hover{transform:translateY(-8px) rotateX(2deg);box-shadow:0 26px 54px rgba(15,30,60,0.30);}
-.tcard::before{content:'';position:absolute;top:-40%;left:-30%;width:70%;height:130%;background:radial-gradient(circle at center,rgba(255,255,255,0.28),transparent 65%);opacity:0;transition:opacity .5s;pointer-events:none;}
-.tcard:hover::before{opacity:1;}
-.tcard .k{font-size:34px;font-weight:800;opacity:0.9;}
-.tcard .tt{font-size:18px;font-weight:700;margin-top:4px;}
-.tcard .dd{font-size:13px;opacity:0.92;margin-top:10px;line-height:1.6;}
-.tcard .go{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:6px 16px;transition:background .3s,transform .3s;}
-.tcard:hover .go{background:rgba(255,255,255,0.3);transform:translateX(4px);}
-.tc-c{background:linear-gradient(140deg,#2F7FB8,#5FB3D6);}
-.tc-a{background:linear-gradient(140deg,#257A5F,#5FC4A2);}
-.tc-b{background:linear-gradient(140deg,#5B4DB0,#A99BE8);}
-
-/* ===== 统计卡（count-up）===== */
-.stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;}
-.stat{flex:1 1 150px;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 14px;text-align:center;transition:transform .3s,box-shadow .3s;}
-.stat:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,30,60,0.10);}
-.stat .v{font-size:27px;font-weight:800;color:var(--green);}
-.stat .l{font-size:12.5px;color:var(--muted);margin-top:3px;}
-
-/* ===== 双栏 ===== */
-.two{display:flex;flex-wrap:wrap;gap:16px;}
-.two>div{flex:1 1 320px;min-width:280px;}
-
-/* ===== 时间线（关于我）===== */
-.timeline{position:relative;padding-left:26px;margin-top:14px;}
-.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#4F8EF7,#8B5CF6);opacity:.35;border-radius:2px;}
-.tl-item{position:relative;padding:12px 0 12px 22px;}
-.tl-item::before{content:'';position:absolute;left:-24px;top:20px;width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 4px rgba(79,143,247,0.15);}
-.tl-item .when{font-size:12.5px;color:var(--muted);font-weight:600;}
-.tl-item .what{font-size:15px;font-weight:600;margin-top:2px;}
-.tl-item .desc{font-size:13.5px;color:#4A545E;margin-top:3px;}
-
-/* ===== 流程 SVG 动画 ===== */
-.flowline{stroke-dasharray:8 7;animation:dash 1.1s linear infinite;}
-@keyframes dash{to{stroke-dashoffset:-15;}}
-.pulse{animation:pulse 2s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
-
-/* ===== 联系区 ===== */
-.contact{display:flex;flex-wrap:wrap;gap:14px;}
-.c-item{flex:1 1 240px;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;transition:transform .3s,box-shadow .3s,border-color .3s;}
-.c-item:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,30,60,0.10);border-color:#C9D9EE;}
-.c-item .ic{font-size:24px;}
-.c-item .t{font-size:13px;color:var(--muted);margin-top:6px;}
-.c-item .v{font-size:16px;font-weight:700;margin-top:4px;}
-
-/* ===== Footer ===== */
-footer{background:var(--dark);color:#9AA8BF;padding:34px 20px 40px;text-align:center;font-size:13px;}
-footer b{color:#DDE6F4;}
-footer .links{margin-top:10px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-footer .links a{color:#8FB8FF;border:1px solid rgba(79,143,247,0.3);border-radius:999px;padding:5px 16px;font-size:12.5px;transition:all .3s;}
-footer .links a:hover{background:rgba(79,143,247,0.15);transform:translateY(-2px);}
-
-/* ===== 滚动渐入动画 ===== */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
-.reveal.in{opacity:1;transform:none;}
-.reveal.l{transform:translateX(-26px);}
-.reveal.r{transform:translateX(26px);}
-
-/* ===== 返回顶部 ===== */
-#topBtn{position:fixed;right:24px;bottom:26px;width:44px;height:44px;border-radius:50%;background:var(--grad);color:#fff;border:none;font-size:18px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:all .35s;box-shadow:0 8px 22px rgba(79,143,247,0.4);z-index:90;}
-#topBtn.show{opacity:1;visibility:visible;transform:none;}
-#topBtn:hover{transform:translateY(-3px);}
-
-/* ===== 页面切换淡入 ===== */
-body{animation:pageIn .5s ease;}
-@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
-/* ===== 响应式 ===== */
-@media (max-width:720px){
-  .hero h1{font-size:30px;}
-  .menu-toggle{display:block;}
-  .nav-links{display:none;position:absolute;top:58px;left:0;right:0;background:rgba(11,18,32,0.97);flex-direction:column;padding:10px 16px;gap:2px;border-bottom:1px solid rgba(255,255,255,0.1);}
-  .nav-links.open{display:flex;}
-  .dropdown{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;box-shadow:none;padding-left:14px;min-width:0;}
-  .tcard:hover{transform:translateY(-6px);}
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -179,11 +14,12 @@ body{animation:pageIn .5s ease;}
     <button class="menu-toggle">菜单</button>
     <div class="nav-links">
       <a class="nav-item active" href="index.html">首页</a>
-      <span class="nav-item has-sub">作品三件套
+      <span class="nav-item has-sub">作品集
         <div class="dropdown">
           <a href="project-c.html"><span class="k">1</span><span>三平台选型评测<span class="d">Coze / 百炼 / Dify 实测 4.50/4.80/4.95</span></span></a>
           <a href="project-a.html"><span class="k">2</span><span>售前方案书<span class="d">给酒店的 POL+Agent 一体化方案</span></span></a>
           <a href="project-b.html"><span class="k">3</span><span>产品需求文档 PRD<span class="d">12 章 + 2 附录 · 15 张规范表格</span></span></a>
+          <a href="project-d.html"><span class="k">4</span><span>NL2SQL 智能问数<span class="d">Multi-Agent 消融实验 · 35.9%→66.7%</span></span></a>
         </div>
       </span>
       <a class="nav-item" href="index.html#about">关于我</a>
@@ -200,19 +36,20 @@ body{animation:pageIn .5s ease;}
       <span>曼彻斯特大学 · 通信与信号处理硕士</span>
       <span>诺基亚 POL 产品线测开（1 年）</span>
       <span>RAG / Agent / LLMOps</span>
-      <span>三平台实测 4.50 / 4.80 / 4.95</span>
+      <span>NL2SQL 消融 35.9% → 66.7%</span>
     </div>
     <p class="lead">我不是"会做测试的人"，而是<b>懂产品、懂客户、懂落地的人</b>：用同一个产品场景，分别以
-      <b>验证（评测）、销售（方案书）、定义（PRD）</b>三个动作做完整闭环，证明我对 Agent 售前与 AI 产品经理岗位的全流程理解。</p>
-    <a class="cta" href="#works">查看三件套作品 ↓</a>
+      <b>验证（评测）、销售（方案书）、定义（PRD）</b>三个动作做完整闭环，再用 NL2SQL Multi-Agent
+      做<b>工程深挖</b>——四件作品证明我对 Agent 售前与 AI 产品经理岗位的全流程理解。</p>
+    <a class="cta" href="#works">查看作品集 ↓</a>
   </div>
   <div class="scroll-hint">SCROLL</div>
 </div>
 
 <section id="works">
   <div class="wrap">
-    <div class="sec-title reveal">作品三件套 · 一个场景</div>
-    <div class="sec-desc reveal">场景统一为「POL 智能运维客服 Agent」——RAG 排障 + 转人工闭环。三件套不是三份文档，是三个岗位动作。</div>
+    <div class="sec-title reveal">作品集 · 主线闭环 + 工程深挖</div>
+    <div class="sec-desc reveal">前三个作品场景统一为「POL 智能运维客服 Agent」——RAG 排障 + 转人工闭环，是售前/产品经理的岗位动作；第 4 个是独立的 ToB 智能问数 Multi-Agent 工程实验，深挖「架构怎么评测、多 Agent 强在哪」。</div>
     <div class="cards3">
       <a class="tcard tc-c reveal" href="project-c.html" style="transition-delay:.05s">
         <div class="k">1</div>
@@ -231,6 +68,12 @@ body{animation:pageIn .5s ease;}
         <div class="tt">产品需求文档 PRD</div>
         <div class="dd">把客户愿意买的定义成研发能做的<br>12 章 + 2 附录 · 15 张规范表格 · MoSCoW · 北极星+护栏</div>
         <div class="go">进入 PRD →</div>
+      </a>
+      <a class="tcard tc-d reveal" href="project-d.html" style="transition-delay:.35s">
+        <div class="k">4</div>
+        <div class="tt">NL2SQL 智能问数</div>
+        <div class="dd">ToB 问数 Multi-Agent 消融实验：同模型同题集纯架构对比<br>达成率 35.9% → 66.7% · 执行率 100% · Token −28%</div>
+        <div class="go">进入消融实验 →</div>
       </a>
     </div>
 
@@ -251,7 +94,7 @@ body{animation:pageIn .5s ease;}
         <text x="605" y="46" font-size="14" fill="#1A1B1C" text-anchor="middle" font-weight="600">B 定义 · PRD</text>
         <text x="605" y="63" font-size="11" fill="#5B4DB0" text-anchor="middle">定义成研发能做的</text>
       </svg>
-      <p style="font-size:14px;color:#3A444C">售前要证明"我懂怎么把 AI 卖进企业"，产品经理要证明"我懂怎么把 AI 定义成产品"，工程师背景保证了"我说的研发能听懂"。同一场景三视角，面试官每问一个角度都有作品可指。</p>
+      <p style="font-size:14px;color:#3A444C">售前要证明"我懂怎么把 AI 卖进企业"，产品经理要证明"我懂怎么把 AI 定义成产品"，工程师背景保证了"我说的研发能听懂"。同一场景三视角，面试官每问一个角度都有作品可指；第 4 件（NL2SQL）则证明<b>我懂怎么用工程方法和评测体系，把 Agent 的能力做扎实、说清楚</b>。</p>
     </div>
   </div>
 </section>
@@ -328,84 +171,12 @@ body{animation:pageIn .5s ease;}
       <a href="project-c.html">三平台选型评测</a>
       <a href="project-a.html">售前方案书</a>
       <a href="project-b.html">产品需求文档 PRD</a>
+      <a href="project-d.html">NL2SQL 智能问数</a>
     </div>
   </div>
 </footer>
 
 <button id="topBtn">↑</button>
-<script>
-/* ===== 作品集交互脚本 ===== */
-(function(){
-  'use strict';
-  var doc = document;
-
-  /* 1. 滚动渐入（IntersectionObserver） */
-  var revealEls = doc.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (en.isIntersecting) {
-          en.target.classList.add('in');
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
-  }
-
-  /* 2. 数字滚动（count-up） */
-  var nums = doc.querySelectorAll('[data-count]');
-  if ('IntersectionObserver' in window && nums.length) {
-    var nio = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (!en.isIntersecting) return;
-        var el = en.target, target = parseFloat(el.getAttribute('data-count'));
-        var decimals = (el.getAttribute('data-dec') || '0').length;
-        var dur = 1100, start = null;
-        function step(ts){
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          var ease = 1 - Math.pow(1 - p, 3);
-          var v = target * ease;
-          el.textContent = decimals ? v.toFixed(decimals) : Math.round(v).toString();
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-        nio.unobserve(el);
-      });
-    }, { threshold: 0.4 });
-    nums.forEach(function(el){ nio.observe(el); });
-  }
-
-  /* 3. 移动端菜单 */
-  var toggle = doc.querySelector('.menu-toggle');
-  var links = doc.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function(){
-      links.classList.toggle('open');
-      toggle.textContent = links.classList.contains('open') ? '关闭' : '菜单';
-    });
-  }
-
-  /* 4. 返回顶部 */
-  var topBtn = doc.getElementById('topBtn');
-  if (topBtn) {
-    window.addEventListener('scroll', function(){
-      if (window.scrollY > 420) topBtn.classList.add('show');
-      else topBtn.classList.remove('show');
-    }, { passive: true });
-    topBtn.addEventListener('click', function(){
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  /* 5. 年份 */
-  var y = doc.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-})();
-
-</script>
+<script src="js/app.js"></script>
 </body>
 </html>
